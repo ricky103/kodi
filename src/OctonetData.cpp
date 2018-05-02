@@ -91,7 +91,7 @@ bool OctonetData::loadChannelList()
 			OctonetChannel chan;
 
 			chan.name = channel["Title"].asString();
-			chan.url = "rtsp://" + serverAddress + "/" + channel["Request"].asString();
+			chan.url = "rtp://" + channel["Request"].asString();
 			chan.radio = group.radio;
 			chan.nativeId = parseID(channel["ID"].asString());
 
